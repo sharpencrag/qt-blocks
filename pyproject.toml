@@ -7,16 +7,23 @@ dev = [
 ]
 
 [project]
-name = "pdm-nox-dev-template"
+name = "qt-blocks"
 version = "0.1.0"
-description = "Template for python projects managed with pdm and tested with nox"
+description = "Prefab Qt blocks and layouts"
 authors = [
     {name = "sharpencrag", email = "ed.whetstone@gmail.com"},
 ]
-dependencies = []
-requires-python = ">=3.7"
+dependencies = [
+    "qtpy>=2.3.1",
+]
+requires-python = ">=3.7,<3.10"
 readme = "README.md"
 license = {text = "MIT"}
+
+[project.optional-dependencies]
+stubs = [
+    "PySide6>=6.5.1.1",
+]
 
 [build-system]
 requires = ["pdm-backend"]
